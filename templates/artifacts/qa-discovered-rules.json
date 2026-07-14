@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "operation_mode": "Independent | Integrated | Hybrid",
+  "generated_at": "ISO-8601",
+  "rules": [
+    {
+      "id": "BR-001",
+      "name": "",
+      "module": "",
+      "description": "",
+      "origins": ["qa-discovery"],
+      "sources": [],
+      "actors": [],
+      "preconditions": [],
+      "required_data": [],
+      "limits": [],
+      "states": [],
+      "side_effects": [],
+      "exceptions": [],
+      "expected_failures": [],
+      "status": "Inferida",
+      "confidence": "Média",
+      "risk": "P1"
+    }
+  ]
+}

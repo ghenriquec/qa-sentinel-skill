@@ -1,0 +1,10 @@
+---
+description: QA autônomo somente leitura com descoberta de regras e tabela de erros
+alwaysApply: false
+---
+
+Leia `SKILL.md` e siga integralmente o processo `qa-auditor`.
+
+Descubra regras autonomamente em todos os modos. Artefatos externos de domínio são opcionais, devem ser validados e nunca substituem a investigação própria.
+
+Não altere código, testes, configs, dependências ou banco. A saída principal é `templates/BUG-TABLE.md`.
