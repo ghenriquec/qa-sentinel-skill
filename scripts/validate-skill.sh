@@ -31,7 +31,7 @@ for file in "${required[@]}"; do
 done
 
 grep -q "name: qa-auditor" "$ROOT/SKILL.md"
-grep -q "version: 2.1.0" "$ROOT/SKILL.md"
+grep -Eq "^version: [0-9]+\\.[0-9]+\\.[0-9]+$" "$ROOT/SKILL.md"
 grep -q "disable-model-invocation: true" "$ROOT/SKILL.md"
 grep -q "Independente" "$ROOT/SKILL.md"
 grep -q "Integrado" "$ROOT/SKILL.md"
