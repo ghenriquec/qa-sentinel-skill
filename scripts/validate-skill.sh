@@ -55,4 +55,5 @@ for forbidden in \
   fi
 done
 
-echo "QA Auditor v2.1.0 structure and architecture are valid."
+version="$(sed -nE 's/^version: ([0-9]+\.[0-9]+\.[0-9]+)$/\1/p' "$ROOT/SKILL.md" | head -n 1)"
+echo "QA Auditor v${version} structure and architecture are valid."

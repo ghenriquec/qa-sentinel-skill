@@ -63,9 +63,10 @@ The repository contains a structural validator for required files and key protoc
 
 ```bash
 bash scripts/validate-skill.sh
+bash tests/test-validate-skill.sh
 ```
 
-[GitHub Actions](.github/workflows/validate.yml) runs this check for pushes and pull requests. **Passing this check does not prove an AI agent's audit accuracy**; behavioral testing still needs to be carried out against the target system.
+[GitHub Actions](.github/workflows/validate.yml) runs structural validation and negative-path regression checks on pushes and pull requests. **Passing this check does not prove an AI agent's audit accuracy**; behavioral testing still needs to be carried out against the target system.
 
 ## Safety
 
@@ -77,6 +78,10 @@ bash scripts/validate-skill.sh
 ## Related work
 
 [Universal Domain Rules Discovery](https://github.com/ghenriquec/universal-domain-rules-discover-skill) explores reusable discovery and traceability of application domain rules. The two projects can complement each other but neither is required to use the other.
+
+## Contributing and security
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local checks and contribution guidance, and [SECURITY.md](SECURITY.md) for handling sensitive audit findings.
 
 ## License
 
