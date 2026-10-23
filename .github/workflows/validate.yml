@@ -16,3 +16,8 @@ jobs:
         run: bash scripts/validate-skill.sh
       - name: Test validator failure handling
         run: bash tests/test-validate-skill.sh
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate QA audit artifact contract
+        run: python -m unittest discover -s tests -p "test_validate_audit.py" -v

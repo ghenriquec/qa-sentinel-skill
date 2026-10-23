@@ -64,7 +64,18 @@ The repository contains a structural validator for required files and key protoc
 ```bash
 bash scripts/validate-skill.sh
 bash tests/test-validate-skill.sh
+python -m unittest discover -s tests -p "test_validate_audit.py" -v
 ```
+
+To validate an **actual generated audit package** after an agent run:
+
+```bash
+python scripts/validate-audit.py /path/to/qa-audit
+```
+
+The package validator checks all ten mandatory artifacts and the basic JSON
+contract (operation mode, timestamp, unique rule IDs and list fields).
+It does not judge the quality, correctness, or completeness of the audit.
 
 [GitHub Actions](.github/workflows/validate.yml) runs structural validation and negative-path regression checks on pushes and pull requests. **Passing this check does not prove an AI agent's audit accuracy**; behavioral testing still needs to be carried out against the target system.
 
